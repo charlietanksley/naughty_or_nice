@@ -1,6 +1,13 @@
 from flask import Flask, send_from_directory
+import tweet_analyzer
+from tweeter import Tweeter
+from twitter import tweets_by
 
 app = Flask(__name__)
+
+@app.route('/api/naughty_count/<username>')
+def naughty_count(username):
+    return Tweeter(username).to_json()
 
 @app.route('/')
 def index():
