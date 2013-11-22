@@ -1,4 +1,4 @@
-# twitter.py
+# twitter_token.py
 from os import getenv, path
 from base64 import b64encode
 import requests
