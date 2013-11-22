@@ -1,9 +1,13 @@
 from flask import Flask, send_from_directory
+
 app = Flask(__name__)
 
 @app.route('/')
+def index():
+    return send_from_directory(app.static_folder, 'index.html')
+
 @app.route('/<path:path>')
-def index(path):
+def catch_all(path):
     return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
