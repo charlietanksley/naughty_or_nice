@@ -13,5 +13,6 @@ def naughty_count(tweets):
     Takes an array of tweets (Twitter objects) and counts the number of "naughty" words in them.
     '''
     regex = re.compile(dictionary.naughty_word_pattern)
-    canon = stringify_array(tweet_bodies(tweets))
+    bodies = tweet_bodies(tweets)
+    canon = stringify_array(bodies)
     return len(regex.findall(canon))
