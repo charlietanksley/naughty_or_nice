@@ -32,7 +32,7 @@ def obtain_twitter_bearer_token():
     response = requests.post(url, data=body, headers=headers)
     return str(response.json()[u'access_token'])
 
-def tweets_by(username, count=100):
+def tweets_by(username, count=200):
     '''Pass a `username` to get a JSON representation of the last `count` tweets by a user
     '''
     url = ''.join(['https://api.twitter.com/1.1/statuses/user_timeline.json?count=',

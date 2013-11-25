@@ -4,7 +4,7 @@ import tweet_analyzer
 import twitter
 
 class Tweeter(object):
-    def __init__(self, username, count=100):
+    def __init__(self, username, count=200):
         self._username = username
         self._tweet_count = count
         self._tweets = None
