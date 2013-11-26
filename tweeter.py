@@ -20,7 +20,7 @@ class Tweeter(object):
 
     def to_json(self):
         return json.dumps({'username': self._username,
-                           'naughty_count': self.naughty_count()})
+                           'naughtyCount': self.naughty_count()})
 
     def tweets(self):
         if self._tweets == None:
