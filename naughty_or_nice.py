@@ -9,6 +9,14 @@ app = Flask(__name__)
 def naughty_count(username):
     return Tweeter(username).to_json()
 
+@app.route('/css/app.css')
+def css():
+    return send_from_directory(app.static_folder, 'app.css')
+
+@app.route('/js/app.js')
+def js():
+    return send_from_directory(app.static_folder, 'js/app.js')
+
 @app.route('/')
 def index():
     return send_from_directory(app.static_folder, 'index.html')
