@@ -1,0 +1,1 @@
+web: gunicorn naughty_or_nice:app
