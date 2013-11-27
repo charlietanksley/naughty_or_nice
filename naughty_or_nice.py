@@ -11,7 +11,7 @@ def naughty_count(username):
 
 @app.route('/css/app.css')
 def css():
-    return send_from_directory(app.static_folder, 'app.css')
+    return send_from_directory(app.static_folder, 'css/app.css')
 
 @app.route('/js/app.js')
 def js():
