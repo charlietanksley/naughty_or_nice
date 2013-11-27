@@ -1,0 +1,11 @@
+#!/bin/sh
+git clone git@github.com:charlietanksley/naughty-or-nice-frontend.git
+cd naughty-or-nice-frontend
+
+npm install -g lineman
+npm install
+lineman build
+
+cd ..
+cp -r naughty-or-nice-frontend/dist/ static/
+rm -r -f naughty-or-nice-frontend
