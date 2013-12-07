@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>naughty-or-nice-frontend</title>
+    <title>How clean are your tweets?</title>
     <meta name="viewport" content="width=device-width" />
 
     <link rel="stylesheet" type="text/css" href="/css/app.css" media="all" />
@@ -17,30 +17,43 @@
     
     <section class="main row">
       <div class="large-6 large-centered columns">
-        <p class="how-to">
-          How nice are your tweets?  Enter your username below to find out!
-        </p>
+        <div class="row">
+          <p class="how-to columns large-12">
+            How nice are your tweets?  Enter your username below to find out!
+          </p>
+        </div>
 
         <form action='/search'>
-          <input placeholder="username" name="username" type="text">
+          <div class="row">
+            <input class="columns large-12" placeholder="username" name="username" type="text">
+          </div>
 
-          <button type="submit" class="postfix">Submit</button>
+          <div class="row">
+            <button class="columns large-12" type="submit">Submit</button>
+          </div>
+        </form>
+
+        <div class="row">
+          <div class="large-12 columns">
+            <p class="what-does-it-mean">
+              <a href="/about/score">What does it mean?</a>
+            </p>
+          </div>
         </div>
-      </form>
+      </div>
     </section>
 
     <section class="report"></section>
 
+    <section class="about row">
+      <div class="large-6 large-centered columns">
+        <p class="credits">
+          Built by <a href="https://github.com/charlietanksley">Charlie
+            Tanksley</a>.
+        </p>
+      </div>
+    </section>
+
     <script type="text/javascript" src="/js/app.js"></script>
-
-    <script id="showUser" type="text/html">
-      <div class="username row">
-        <h2 class="name">{ report.username }</h2>
-      </div>
-
-      <div class="row">
-        <p class="score">Score: { report.naughtyCount }</p>
-      </div>
-    </script>
   </body>
 </html>
