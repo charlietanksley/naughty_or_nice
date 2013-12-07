@@ -1,13 +1,24 @@
-naughty_words = ['shit',
+# http://simple.wikipedia.org/wiki/Profanity
+naughty_words = ['ass',
+                 'bastard',
+                 'bollocks',
+                 'bitch',
+                 'cock',
+                 'cunt',
                  'damn',
-                 'fuck',
-                 'ass',
                  'dick',
-                 'stupid',
-                 'dumb',
-                 'pissed',
-                 'livid',
-                 'mad',
-                 'angry']
+                 'fuck',
+                 'hell',
+                 'jerkoff',
+                 'motherfucker',
+                 'piss',
+                 'poon',
+                 'prick',
+                 'pussy',
+                 'quim',
+                 'shit',
+                 'slut',
+                 'wanker']
+
 
 naughty_word_pattern = '|'.join(naughty_words)
