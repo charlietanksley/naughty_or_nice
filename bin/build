@@ -4,6 +4,7 @@ cd naughty-or-nice-frontend
 
 npm install -g lineman
 npm install
+bower install
 lineman build
 
 cd ..
