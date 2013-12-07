@@ -28,7 +28,9 @@ class Tweeter(object):
 
     def to_json(self):
         return json.dumps({'username': self._username,
-                           'naughtyCount': self.naughty_count()})
+                           'naughtyCount': self.naughty_count(),
+                           'naughtyTweets': self.naughty_tweets(),
+                           'tweetsConsidered': len(self.tweets())})
 
     def tweets(self):
         if self._tweets == None:
