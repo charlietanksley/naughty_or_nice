@@ -8,9 +8,17 @@ class Tweeter(object):
         self._username = username
         self._tweet_count = count
         self._tweets = None
+        self._naughty_tweets = None
+
+    def naughty_tweets(self):
+        if self._naughty_tweets == None:
+            self._naughty_tweets = tweet_analyzer.naughty_tweets(self.tweets())
+            return self._naughty_tweets
+        else:
+            return self._naughty_tweets
 
     def naughty_count(self):
-        return tweet_analyzer.naughty_count(self.tweets())
+        return len(self.naughty_tweets())
 
     def set_tweets(self):
         tweets = twitter.tweets_by(str(self._username), self._tweet_count)
